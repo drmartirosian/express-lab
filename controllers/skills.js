@@ -1,16 +1,16 @@
-
-
-
-var Skills = require('../modules/skill');
-
-module.export = {
-
+var Skill = require('../modules/skills');
+module.exports = {
     index,
-    skills,
-
+    show,
 };
-
-
 function show(req, res){
-console.log('TESTING')
-};
+    res.render('skills/show', {
+        skills: Skill.getOne(req.param.id),
+        skillsNum: parseInt(req.params.id)+1
+});
+}
+function index(req, res) {
+    res.render('skills/index', {
+        skills: Skill.getAll()
+    });
+}; 

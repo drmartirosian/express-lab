@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>SKILLS List</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>SKILLS</h1>
-    <a href='../'>BACK HOME</a>
-  </body>
+<head>
+  <title>SKILLS List</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>SKILLS</h1>
+  <a href='../'>BACK HOME</a>
+  <ul>
+    <% skills.forEach(function(sk){ %>
+    <li>
+      <% sk.skill %>
+      -
+     <%= sk.unlocked ? 'complete' : 'in-progress' %>     
+    </li>
+    <% }); %>
+  </ul>
+
+
+
+</body>
 </html>
