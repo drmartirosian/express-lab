@@ -10,11 +10,7 @@
   <a href='../'>BACK HOME</a>
   <ul>
     <% skills.forEach(function(sk){ %>
-    <li>
-      <% sk.skill %>
-      -
-     <%= sk.unlocked ? 'complete' : 'in-progress' %>     
-    </li>
+      <li> <%= sk.skill %> - <%= sk.unlocked ? 'complete' : 'in-progress' %></li>
     <% }); %>
   </ul>
 
